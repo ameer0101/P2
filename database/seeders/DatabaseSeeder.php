@@ -25,5 +25,9 @@ class DatabaseSeeder extends Seeder
         $this->call(itemDiscountSeeder::class);
         Rate::factory()->count(140)->create();
         Favourite::factory()->count(50)->create();
+<<<<<<< HEAD
+=======
+        $this->call(TablesSeeder::class);
+>>>>>>> project1/main
     }
 }

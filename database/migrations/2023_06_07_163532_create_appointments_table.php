@@ -15,9 +15,18 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('table_id');
+<<<<<<< HEAD
             $table->time('start_time');
             $table->time('end_time');
             $table->boolean('accepted');
+=======
+            $table->date('date');
+            $table->time('start_time');
+            $table->time('end_time');
+            $table->boolean('accepted');
+            $table->boolean('admin_responsed');
+            $table->boolean('ended');
+>>>>>>> project1/main
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('table_id')->references('id')->on('tables')->onDelete('cascade');
         });

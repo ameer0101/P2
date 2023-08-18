@@ -20,9 +20,12 @@ return new class extends Migration
             $table->integer('stars');
             $table->timestamps();
         });
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> project1/main
     }
 
     /**

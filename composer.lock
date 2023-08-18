@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "2f4fee95cde12a27f66f9505ddbe5d7e",
+=======
+    "content-hash": "024db2e480283e74005ca619fe57ceeb",
+>>>>>>> project1/main
     "packages": [
         {
             "name": "brick/math",
@@ -1508,6 +1512,7 @@
             "time": "2023-01-30T18:31:20+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "laravel/socialite",
             "version": "v5.8.0",
             "source": {
@@ -1578,6 +1583,8 @@
             "time": "2023-07-14T14:22:58+00:00"
         },
         {
+=======
+>>>>>>> project1/main
             "name": "laravel/tinker",
             "version": "v2.8.1",
             "source": {
@@ -2232,6 +2239,7 @@
             "time": "2022-04-17T13:12:02+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "league/oauth1-client",
             "version": "v1.10.1",
             "source": {
@@ -2308,6 +2316,8 @@
             "time": "2022-04-15T14:02:14+00:00"
         },
         {
+=======
+>>>>>>> project1/main
             "name": "league/oauth2-server",
             "version": "8.4.1",
             "source": {
@@ -2669,6 +2679,7 @@
         },
         {
             "name": "nesbot/carbon",
+<<<<<<< HEAD
             "version": "2.67.0",
             "source": {
                 "type": "git",
@@ -2679,6 +2690,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/c1001b3bc75039b07f38a79db5237c4c529e04c8",
                 "reference": "c1001b3bc75039b07f38a79db5237c4c529e04c8",
+=======
+            "version": "2.68.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/briannesbitt/Carbon.git",
+                "reference": "4f991ed2a403c85efbc4f23eb4030063fdbe01da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/4f991ed2a403c85efbc4f23eb4030063fdbe01da",
+                "reference": "4f991ed2a403c85efbc4f23eb4030063fdbe01da",
+>>>>>>> project1/main
                 "shasum": ""
             },
             "require": {
@@ -2767,7 +2790,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2023-05-25T22:09:47+00:00"
+=======
+            "time": "2023-06-20T18:29:04+00:00"
+>>>>>>> project1/main
         },
         {
             "name": "nette/schema",

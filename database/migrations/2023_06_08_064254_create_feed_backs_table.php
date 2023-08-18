@@ -16,7 +16,12 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('comment');
+<<<<<<< HEAD
             $table->date('date');
+=======
+            $table->timestamp('date')->default(\DB::raw('CURRENT_TIMESTAMP'));
+
+>>>>>>> project1/main
             $table->timestamps();
         });
     }

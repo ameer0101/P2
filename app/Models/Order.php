@@ -9,6 +9,11 @@ class Order extends Model
 {
     public $timestamps = false;
     use HasFactory;
+<<<<<<< HEAD
+=======
+    protected $fillable = ['cart_id','item_size_id','quantity','payment','notes'];
+
+>>>>>>> project1/main
     public function cart(){
         return $this->belongsTo(Cart::class,'cart_id');
     }

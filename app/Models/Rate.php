@@ -8,11 +8,17 @@ use Database\Factories\RateFactory;
 
 class Rate extends Model
 {
+<<<<<<< HEAD
     
     use HasFactory;
     protected $fillable = [
         'user_id', 'menu_item_id','stars'
     ];
+=======
+    protected $guarded=[];
+    use HasFactory;
+    
+>>>>>>> project1/main
     public function user(){
         return $this->belongsTo(User::class,'user_id');
     }

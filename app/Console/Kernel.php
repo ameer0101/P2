@@ -12,9 +12,15 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
+<<<<<<< HEAD
         // $schedule->command('inspire')->hourly();
     }
 
+=======
+        // php artisan schedule:work
+        $schedule->command('discounts:update-validity')->daily();
+    }
+>>>>>>> project1/main
     /**
      * Register the commands for the application.
      */

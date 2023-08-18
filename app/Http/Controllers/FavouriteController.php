@@ -20,7 +20,15 @@ class FavouriteController extends Controller
     public function show($id)
     {
         $favourites = Favourite::query()
+<<<<<<< HEAD
             ->where('id', '=', $id)->get();
+=======
+            ->where('user_id', '=', $id)->get();
+            foreach($favourites as $fav){
+                $fav['name']=Menu_item::findOrFail($fav->menu_item_id)->name;
+                $fav['image']=Menu_item::findOrFail($fav->menu_item_id)->image;
+            }
+>>>>>>> project1/main
         return response()->json([
             'favourites'=>$favourites,
         ],200);
@@ -48,7 +56,11 @@ class FavouriteController extends Controller
 
     public function destroy($id): JsonResponse
     {
+<<<<<<< HEAD
         $favourite = Favourite::query()->find($id)->delete();
+=======
+        $favourite = Favourite::query()->where('menu_item_id',$id)->delete();
+>>>>>>> project1/main
         if($favourite) return response()->json()->setStatusCode(200);
         else  return response()->json(['message'=>'Delete Failed']);
     }

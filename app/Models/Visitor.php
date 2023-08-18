@@ -9,6 +9,10 @@ class Visitor extends Model
 {
     use HasFactory;
     public $timestamps = false;
+<<<<<<< HEAD
+=======
+    protected $guarded=[];
+>>>>>>> project1/main
     public function user(){
         return $this->belongsTo(User::class,'user_id');
     }

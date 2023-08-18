@@ -37,8 +37,12 @@ class User extends Authenticatable
         'email',
         'password',
         'role',
+<<<<<<< HEAD
         'phone',
         'google_id'
+=======
+        'phone'
+>>>>>>> project1/main
     ];
 
     /**

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+<<<<<<< HEAD
            $table->unsignedBigInteger('menu_item_id');
             $table->foreign('menu_item_id')->references('id')->on('menu_items')->onDelete('cascade');
         
@@ -24,6 +25,14 @@ return new class extends Migration
        
     
 
+=======
+            $table->unsignedBigInteger('menu_item_id');
+            $table->foreign('menu_item_id')->references('id')->on('menu_items')->onDelete('cascade');
+            $table->timestamps();
+        });
+    }
+
+>>>>>>> project1/main
     /**
      * Reverse the migrations.
      */
@@ -32,6 +41,9 @@ return new class extends Migration
         Schema::dropIfExists('favourites');
     }
 };
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> project1/main

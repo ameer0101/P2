@@ -10,8 +10,13 @@
         "laravel/framework": "^10.10",
         "laravel/passport": "^11.8",
         "laravel/sanctum": "^3.2",
+<<<<<<< HEAD
         "laravel/socialite": "^5.8",
         "laravel/tinker": "^2.8"
+=======
+        "laravel/tinker": "^2.8",
+        "nesbot/carbon": "^2.68"
+>>>>>>> project1/main
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

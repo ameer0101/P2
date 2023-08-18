@@ -17,6 +17,10 @@ return new class extends Migration
             $table->unsignedBigInteger('table_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('table_id')->references('id')->on('tables')->onDelete('cascade');
+<<<<<<< HEAD
+=======
+            $table->date('date');
+>>>>>>> project1/main
             $table->time('start_time');
             $table->time('end_time');
         });

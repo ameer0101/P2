@@ -15,7 +15,12 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('visitor_id');
             $table->foreign('visitor_id')->references('id')->on('visitors')->onDelete('cascade');
+<<<<<<< HEAD
             $table->boolean('approved');
+=======
+            $table->boolean('approved')->default(false)->change();
+
+>>>>>>> project1/main
             $table->float('final_price');
             $table->boolean('payed');
             $table->string('status');
@@ -27,6 +32,10 @@ return new class extends Migration
      */
     public function down(): void
     {
+<<<<<<< HEAD
+=======
+    
+>>>>>>> project1/main
         Schema::dropIfExists('carts');
     }
 };

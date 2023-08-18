@@ -19,7 +19,10 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('phone');
             $table->string('password');
+<<<<<<< HEAD
             $table->string('google_id')->nullable();
+=======
+>>>>>>> project1/main
             $table->rememberToken();
             $table->timestamps();
         });

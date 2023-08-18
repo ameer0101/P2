@@ -2,19 +2,61 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use App\Mail\SendCodeResetPassword;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\ResetCodePassword;
 use Illuminate\Support\Facades\Mail;
+=======
+use Illuminate\Http\Request;
+use App\Models\User;
+>>>>>>> project1/main
 use Illuminate\Validation\Rules\Password as password_rule;
 use Illuminate\Http\JsonResponse;
 use App\Models\Menu_item;
 use App\Models\Rate;
 
+<<<<<<< HEAD
 
 class AuthController extends Controller
 {
+=======
+class AuthController extends Controller
+{
+    function search_by_name($name){
+        return Menu_item::where('name','like','%'.$name.'%')->get();
+    }
+    function rate(Request $request, $id){
+        $request->validate([
+            'stars' => ['integer', 'required', 'max:5', 'min:1']
+        ]);
+        $user = auth()->user();
+        $user_id = $user->id;
+        $check = Rate::query()
+            ->where('user_id', '=', $user_id)
+            ->where('menu_item_id', '=', $id)->first();
+        if($check !== null){if($check->exists()){
+            $check->update([
+                'stars' => $request['stars']
+            ]);
+        }}
+        else{
+            Rate::query()->create([
+                'stars' => $request['stars'],
+                'menu_item_id' => $id,
+                'user_id' => $user_id
+            ]);}
+            
+        
+        
+        //$menu_item = Menu_item::query()->find($id);
+        //$stars =  ($menu_item['stars'] + $request['stars']) / 2;
+       // $menu_item->stars = $stars;
+       // $menu_item->save();
+       return response()->json(['success' => ' successfully']);
+    }
+>>>>>>> project1/main
     public function userRegister(Request $request): JsonResponse{
         $request->validate([
             'name' => ['required', 'max:55', 'string'],
@@ -67,6 +109,7 @@ class AuthController extends Controller
         $request->user()->token()->revoke();
         return response()->json(['success' => 'logged out successfully']);
     }
+<<<<<<< HEAD
     function search_by_name($name){
         return Menu_item::where('name','like','%'.$name.'%')->get();
     }
@@ -167,4 +210,7 @@ class AuthController extends Controller
 
          return response()->json(['message' => 'password has been successfully reset']);
     }
+=======
+    
+>>>>>>> project1/main
 }
